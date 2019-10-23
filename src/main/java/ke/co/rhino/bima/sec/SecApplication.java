@@ -22,14 +22,17 @@ public class SecApplication {
 	CommandLineRunner runner(){
 		return args -> {
 			// username: user password: user
-			repo.save(User.builder().username("user")
+			repo.save(User.builder()
+					.username("user")
 					.password("$2a$04$1.YhMIgNX/8TkCKGFUONWO1waedKhQ5KrnB30fl0Q01QKqmzLf.Zi")
 					.role("USER")
 					.build());
 			// username: admin password: admin
-			repo.save(User.builder().username("admin")
+			repo.save(User.builder()
+					.username("admin")
 					.password("$2a$04$KNLUwOWHVQZVpXyMBNc7JOzbLiBjb9Tk9bP7KNcPI12ICuvzXQQKG")
-					.role("ADMIN").build());
+					.role("ADMIN")
+					.build());
 		};
 	}
 
